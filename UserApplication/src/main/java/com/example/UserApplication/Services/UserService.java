@@ -1,12 +1,12 @@
-package Services;
+package com.example.UserApplication.Services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DA.UserInterface;
-import Models.User;
+import com.example.UserApplication.DA.UserInterface;
+import com.example.UserApplication.Models.User;
 
 @Service
 public class UserService {
