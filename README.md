@@ -5,4 +5,4 @@ The project will be an online store platform. This platform will help customers 
 - Alaa Farouk @alaafar256
 - Maria Emil @mariaaemiil3
 - Nardine Nabil @NardineNabil
->>>>>>> d83efb7e3ed7d4ed2f8b2d7d6463824f0c694778
+
