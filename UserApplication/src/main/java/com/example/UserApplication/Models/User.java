@@ -1,4 +1,5 @@
-package Models;
+package com.example.UserApplication.Models;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
