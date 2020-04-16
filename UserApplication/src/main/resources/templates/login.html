@@ -3,27 +3,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Login For Users</title>
+<title>Login</title>
 </head>
 <body>
    <div align = "center">
-  <h1> Create New User </h1>
-
+  <h1> Login </h1>
   <br/> <br/> 
-  <form action = "#" th:action="@{/loginforusers}" th:object="${user}" method="post">
+  <form action = "#" th:action="@{/login}" th:object="${user}" method="post">
    <table border="1" cellpadding="10" >
-                 
                 <tr>
-                    <td>Email:</td>
-                    <td><input type="text" th:field="*{email}" /></td>
+                    <td>Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
                     <td><input type="text" th:field="*{password}" /></td>
-                </tr>   
-                       
+                </tr>            
                 <tr>
-                    <td colspan="2"><button type="submit">loginforusers</button> </td>
+                    <td colspan="2"><button type="submit">login</button> </td>
                 </tr>
    
    </table>
