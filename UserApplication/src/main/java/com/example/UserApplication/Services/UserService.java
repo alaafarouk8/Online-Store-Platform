@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.UserApplication.DA.UserInterface;
+import com.example.UserApplication.DA.UserRepository;
 import com.example.UserApplication.Models.User;
 
 @Service
 public class UserService {
 	@Autowired
-	private UserInterface log;
+	private UserRepository log;
 	
 	public List<User> listAll(){
 		return log.findAll();
