@@ -1,4 +1,4 @@
-package com.example.UserApplication;
+ package com.example.UserApplication;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +46,4 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	} 
 	 
 
-}
+} 
