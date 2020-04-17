@@ -26,6 +26,11 @@ public class UserService {
 	{
 		log.save(user) ; 
 	}
+
+	public Object findByUsername(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
