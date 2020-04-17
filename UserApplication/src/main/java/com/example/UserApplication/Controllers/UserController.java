@@ -20,17 +20,16 @@ public class UserController {
 	private UserService service;
 	
 	@RequestMapping("/listofusers")
-	public String viewlistusers(Model model) {
+	public String viewlistusers(Model model ,User user) {
 		
 		List <User> listUsers = service.listAll();
 		model.addAttribute("listUsers", listUsers);
+
+			return "index";	 
 		
-		return "index";
 	}
 	@RequestMapping("/")
 	public String welcome(Model model) {
-	//	List <User> listUsers = service.listAll();
-	//	model.addAttribute("listUsers", listUsers);
 		return "success";
 	}
 	@RequestMapping("/new")
@@ -44,13 +43,7 @@ public class UserController {
 	@RequestMapping(value="/save")
 	public String saveuser(@ModelAttribute("user") User user) {
 	      service.adduser(user);
-	     if (user.getId()==1) {
-	      return "redirect:/listofusers";
-	     }
-	     else
-	     {
-	    	 return "error" ; 
-	     }
+	      return "redirect:/listofusers";   
 	}
 
 	@RequestMapping("/login")
