@@ -4,14 +4,19 @@
 <meta charset="ISO-8859-1">
 <title>User</title>
 </head>
+<style>
+ h3 {text-align: center;}
+body {
+  background-color: #33E0D4 ;
+}
+</style>
 <body>
 <div align="center">
 <h3 th:inline="text"> [[${#httpServletRequest.remoteUser}]]</h3> 
 <form th:action="@{/logout}" method="post">
-  <input type="submit" value="logout" />
+  <input  type="submit" value="logout" />
  
     <h1>User</h1>
-    <a href="/new">Signup</a>
     <br/><br/>
     <table border="1" cellpadding="10">
         <thead>

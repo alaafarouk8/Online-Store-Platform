@@ -20,6 +20,15 @@ public class UserController {
 	private UserService service;
 	
 	@RequestMapping("/listofusers")
+	public String viewlistusers(Model model ) {
+		
+		List <User> listUsers = service.listAll();
+		model.addAttribute("listUsers", listUsers);
+			return "index";
+		
+	} 
+	/* 
+	 @RequestMapping("/listofusers")
 	public String viewlistusers(Model model ,@ModelAttribute("user_login") User user_login) {
 		
 		List <User> listUsers = service.listAll();
@@ -33,6 +42,7 @@ public class UserController {
 			return"error";
 		}
 	}
+	 */
 	@RequestMapping("/")
 	public String welcome(Model model) {
 		return "success";
