@@ -36,14 +36,14 @@ public class UserController {
 	
 	@RequestMapping(value="/save")
 	public String saveuser(@ModelAttribute("user") User user) {
-	    service.adduser(user);
-	    if(user.getId()==1) {
-	    return "redirect:/";
-	    }
-	    else 
-	    {
-	    	return"error";
-	    }
+	      service.adduser(user);
+	     if (user.getId()==1) {
+	      return "redirect:/";
+	     }
+	     else
+	     {
+	    	 return "error" ; 
+	     }
 	}
 
 	@RequestMapping("/login")
