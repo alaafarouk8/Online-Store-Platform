@@ -19,13 +19,18 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	@RequestMapping("/")
+	@RequestMapping("/listofusers")
 	public String viewlistusers(Model model) {
 		List <User> listUsers = service.listAll();
 		model.addAttribute("listUsers", listUsers);
 		return "index";
 	}
-	
+	@RequestMapping("/")
+	public String welcome(Model model) {
+	//	List <User> listUsers = service.listAll();
+	//	model.addAttribute("listUsers", listUsers);
+		return "success";
+	}
 	@RequestMapping("/new")
 	public String adduser(Model model) {
 	    User user = new User();
@@ -38,7 +43,7 @@ public class UserController {
 	public String saveuser(@ModelAttribute("user") User user) {
 	      service.adduser(user);
 	     if (user.getId()==1) {
-	      return "redirect:/";
+	      return "redirect:/listofusers";
 	     }
 	     else
 	     {
