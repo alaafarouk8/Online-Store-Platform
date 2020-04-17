@@ -20,13 +20,18 @@ public class UserController {
 	private UserService service;
 	
 	@RequestMapping("/listofusers")
-	public String viewlistusers(Model model ,User user) {
+	public String viewlistusers(Model model ,@ModelAttribute("user_login") User user_login) {
 		
 		List <User> listUsers = service.listAll();
 		model.addAttribute("listUsers", listUsers);
-
-			return "index";	 
-		
+		if(user_login.getId()==1)
+		{
+			return "index";
+		}
+		else
+		{
+			return"error";
+		}
 	}
 	@RequestMapping("/")
 	public String welcome(Model model) {
