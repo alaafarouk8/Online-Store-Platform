@@ -21,8 +21,10 @@ public class UserController {
 	
 	@RequestMapping("/listofusers")
 	public String viewlistusers(Model model) {
+		
 		List <User> listUsers = service.listAll();
 		model.addAttribute("listUsers", listUsers);
+		
 		return "index";
 	}
 	@RequestMapping("/")
@@ -53,9 +55,6 @@ public class UserController {
 
 	@RequestMapping("/login")
 	public String login(Model model) {
-	    User user = new User();
-	    model.addAttribute("user",user);
-	     
 	    return "login";
 	}
 	
